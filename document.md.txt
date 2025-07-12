@@ -1,0 +1,19 @@
+# Calculator Web App
+
+A simple calculator built with HTML, CSS, and JavaScript.
+
+## Features
+- Basic arithmetic operations (+, -, ×, ÷)
+- Clear and equals functionality
+- Responsive design
+
+## Usage
+Open `index.html` in your browser.
+
+## Structure
+- `index.html`: Calculator UI
+- `style.css`: Styles
+- `script.js`: Logic
+
+## Author
+Your Name

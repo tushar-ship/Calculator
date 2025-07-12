@@ -1,0 +1,110 @@
+/* Calculator dark theme UI/UX from image */
+body {
+  background: #23292c;
+  font-family: 'Inter', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.calculator {
+  background: #23292c;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2), 0 8px 32px rgba(0, 0, 0, 0.5);
+  width: 340px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  max-width: 95vw;
+  position: relative;
+}
+.calculator::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 50%;
+  z-index: -1;
+}
+.display {
+  background: transparent;
+  min-height: 3.5rem;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 2.2rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1.2rem;
+}
+.display .result {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: right;
+}
+.display .expression {
+  color: #aaa;
+  font-size: 1.4rem;
+  text-align: right;
+  margin-bottom: 0.5rem;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+button {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1.4rem;
+  background: #23292c;
+  color: #00bfff;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.2s, color 0.2s;
+  font-weight: 500;
+  outline: none;
+}
+button:hover {
+  background: #283036;
+}
+button:active {
+  transform: scale(0.95);
+}
+button.function.ac,
+button.function.percent,
+button.function.paren,
+button.operator,
+button.equal,
+button.function.backspace {
+  color: #00bfff;
+}
+button.equal {
+  background: #23292c;
+  color: #00bfff;
+  font-weight: 700;
+}
+button.function.ac {
+  color: #00bfff;
+}
+button.function.backspace {
+  font-size: 1.2rem;
+}
+button.number,
+button.number:focus {
+  color: #fff;
+  background: #23292c;
+}
+/* Remove history and theme toggle for this minimal UI */
+.history-popup, .history, #theme-toggle {
+  display: none !important;
+}
